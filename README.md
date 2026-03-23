@@ -6,7 +6,7 @@ When ready to render your animation. Got to Render Properties panel > Sampling >
 
 Then go to "Denoise Render" and set the input path, this is the path we used for the render output path prior. Then choose an output path for the denoised images and hit "Denoise Temporal". Its best to have a console window open prior to this. This way you can keep track of the frames which have been denoised. THere is not visual feedback in the UI and Blender seems to be freezing.
 
-!['Look UI'](https://raw.githubusercontent.com/wiki/schroef/temporal-animation-denoiser/images/temporal-animation-denoiser-v002.jpg?v20260323)
+!['Look UI'](https://raw.githubusercontent.com/wiki/schroef/temporal-animation-denoiser/images/temporal-animation-denoiser-v002.jpg?v20260323-v2)
 
 > Preview of the panel
 
