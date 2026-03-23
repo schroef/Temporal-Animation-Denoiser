@@ -10,11 +10,18 @@ Then go to "Denoise Render" and set the input path, this is the path we used for
 
 > Preview of the panel
 
-BlenderShouthern SHotty made a nice video explaing this more into depth. 
-![https://raw.githubusercontent.com/wiki/schroef/temporal-animation-denoiser/images/shouternshotty-720.jpg?v20260323](https://www.youtube.com/watch?v=NsR0UybO-PY)
+### Explanation videos
+Shouthern Shotty made a nice video explaing this more into depth. 
+
+> see tutorial [here](https://www.youtube.com/watch?v=NsR0UybO-PY)
+
+!['Look ui'](https://raw.githubusercontent.com/wiki/schroef/temporal-animation-denoiser/images/shouternshotty-720.jpg?v20260323)
 
 Here is also another explanation by Robine Squares
-![https://raw.githubusercontent.com/wiki/schroef/temporal-animation-denoiser/images/robinsquares-720.jpg?v20260323](https://youtu.be/yAbuPpbbATA?t=524)
+
+> see tutorial [here](https://youtu.be/yAbuPpbbATA?t=524)
+
+!['look ui'](https://raw.githubusercontent.com/wiki/schroef/temporal-animation-denoiser/images/robinsquares-720.jpg?v20260323)
 
 ### System Requirements
 
