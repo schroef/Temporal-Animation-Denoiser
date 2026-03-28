@@ -1,10 +1,10 @@
 # Temporal Animation Denoiser
 
-This addon makes use of Blender's build Temporal Animation denoiser. Normally this only works when you have just rendered your scene. Using a code snippet found in [this article](https://artisticrender.com/how-to-denoise-an-animation-in-blender-using-temporal-denoising/) i converted it to a simple addon. The addon adds an extra panel under Samples in Render Properties
+This addon makes use of Blender's build Temporal Animation denoiser. Normally this only works when you have just rendered your scene. Using a code snippet found in [this article](https://artisticrender.com/how-to-denoise-an-animation-in-blender-using-temporal-denoising/) i converted it to a simple addon.
 
-When ready to render your animation. Got to Render Properties panel > Sampling > Temporal Animation Denoiser. First set the output path for the animation, we are going to EXR files here. Then click "Setup Temporal", this will make sure we're using EXR Multi-Layer image and use the correct passes. Hit render and wait for it to finish.
+When ready to render your animation. Got to Render Properties panel > Sampling > Temporal Animation Denoiser. First set the output path for the animation, we are going to use EXR Multi-Layer files here. Then click "Setup Temporal", this will make sure we're using EXR Multi-Layer image and use the correct passes. Hit Render Animation and wait for it to finish.
 
-Then go to "Denoise Render" and set the input path, this is the path we used for the render output path prior. Then choose an output path for the denoised images and hit "Denoise Temporal". Its best to have a console window open prior to this. This way you can keep track of the frames which have been denoised. THere is not visual feedback in the UI and Blender seems to be freezing.
+Use the Denoise Settings from the Denoise panel to control the quality and speed of the Temporal Denoiser. Then go to "Denoise Render" and set the input path, this is the path we used for the render output path prior. Then choose an output path for the denoised images and hit "Denoise Temporal". Its best to have a console window open prior to this. This way you can keep track of the frames which have been denoised. There is not visual feedback in the UI and Blender seems to be freezing.
 
 !['Look UI'](https://raw.githubusercontent.com/wiki/schroef/temporal-animation-denoiser/images/temporal-animation-denoiser-v002.jpg?v20260323-v2)
 

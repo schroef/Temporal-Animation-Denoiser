@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Temporal Animation Denoiser",
     "author": "Rombout Versluijs, ArtisticRender",
-    "version": (0, 0, 2),
+    "version": (0, 0, 3),
     "blender": (2, 80, 0),
     "location": "Render > Denoise > Temporal Denoiser",
     "description": "Denoises render or EXR image sequence using build Temporal Denoiser",
@@ -86,7 +86,7 @@ class QS_OP_SetupTemporalAnimation(bpy.types.Operator):
 
 
 class QS_OP_DenoiseTemporalAnimation(bpy.types.Operator):
-    """Denoise the pre-rendered images using Blenders Temporal Animation. It denoises the images using vector pass and denoise data."""
+    """Denoise the pre-rendered images using Blenders Temporal Animation. It denoises the images using vector pass and denoise data. It uses the settings from the Denoise panel under Sampling > Render settings. The denoise settings panel influences the quality of the Temporal Denoiser."""
     bl_idname = "qs.denoise_temporal_animation"
     bl_label = "Denoise Temporal"
 
@@ -176,10 +176,13 @@ class CYCLES_RENDER_PT_temporal_denoiser(CyclesButtonsPanel, Panel):
         col = layout.column(heading="Denoising")
         col.prop(ta_settings, "inputpath")
         col.prop(ta_settings, "outputpath")
+
+        if ta_settings.inputpath != "" and ta_settings.outputpath != "":
+            layout.label(text="See Denoise settings", icon='INFO')
         layout.operator("qs.denoise_temporal_animation")
 
 
-# SUing sub sub panels?!
+# Using sub sub panels?!
 class CYCLES_RENDER_PT_setup_temporal_denoise(CyclesButtonsPanel, Panel):
     bl_label = "Setup Temporal Denoise"
     bl_parent_id = 'CYCLES_RENDER_PT_temporal_denoiser'
@@ -199,6 +202,7 @@ class CYCLES_RENDER_PT_setup_temporal_denoise(CyclesButtonsPanel, Panel):
         # if ta_settings.renderoutputpath != "":
         layout.operator("qs.setup_temporal_animation")
         if ta_settings.setupTemporal:
+
             props = layout.operator("render.render", text="Render Animation", icon='RENDER_ANIMATION')
             props.animation = True
             props.use_viewport = True
@@ -220,6 +224,9 @@ class CYCLES_RENDER_PT_denoise_temporal_denoise(CyclesButtonsPanel, Panel):
         col = layout.column(heading="Denoising")
         col.prop(ta_settings, "inputpath")
         col.prop(ta_settings, "outputpath")
+
+        if ta_settings.inputpath != "" and ta_settings.outputpath != "":
+            layout.label(text="Uses Denoise settings", icon='INFO')
         layout.operator("qs.denoise_temporal_animation")
 
 
