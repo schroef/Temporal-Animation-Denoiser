@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Info about how to control Temporal Denoiser
+- When Temporal Denoiser is setup, we show "Render Animation" button for convience
 
 ## [0.0.2] - 2026-03-23
 ### Fixed
